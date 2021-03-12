@@ -26,7 +26,7 @@ const Header = () =>
                     <Nav className="m-auto">
                         <LinkContainer to='/' className='py-0 my-0'>
                             <Navbar.Brand>
-                                <img alt="Kalpavarikshcart" style={{ width: 180, height: 60 }} src={window.location.origin + "/logo.png"} />
+                                Hackindi
                             </Navbar.Brand>
                         </LinkContainer>
                     </Nav>
@@ -42,14 +42,9 @@ const Header = () =>
                         </Form>
                     </Col>
                     <Col md={3} className='my-2' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <LinkContainer to='/location'>
+                        <LinkContainer to='/wishlist'>
                             <Nav.Link>
-                                <i className='fas fa-map-marker-alt' style={{ fontSize: 30 }}></i>
-                            </Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to={userInfo ? '/profile' : '/login'}>
-                            <Nav.Link>
-                                <i className='fas fa-user' style={{ fontSize: 30 }}></i>
+                                <i className='far fa-heart' style={{ fontSize: 30 }}></i>
                             </Nav.Link>
                         </LinkContainer>
                         <LinkContainer to='/cart'>
@@ -59,7 +54,12 @@ const Header = () =>
                         </LinkContainer>
                         <LinkContainer to='/store'>
                             <Nav.Link>
-                                <i className='fas fa-store-alt' style={{ fontSize: 30 }}></i>
+                                <i className='far fa-bell' style={{ fontSize: 30 }}></i>
+                            </Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to={userInfo ? '/profile' : '/login'}>
+                            <Nav.Link>
+                                <i className='far fa-user' style={{ fontSize: 30 }}></i>
                             </Nav.Link>
                         </LinkContainer>
                     </Col>
@@ -68,7 +68,7 @@ const Header = () =>
             <Drawer anchor='left' open={drawerOpen} onClose={() => { setDrawerOpen(false) }}>
                 <List style={{ width: 250 }}>
                     <ListItem>
-                        <ListItemText primary={<div style={{ fontWeight: 'bold', fontSize: 20 }}>Kalpavrikshcart</div>} />
+                        <ListItemText primary={<div style={{ fontWeight: 'bold', fontSize: 20 }}>Hackindi</div>} />
                         <Button className='ml-auto' onClick={() => setDrawerOpen(false)}><i className='fas fa-times' /></Button>
                     </ListItem>
                     <Divider />
