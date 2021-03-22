@@ -1,0 +1,17 @@
+1. Course Fields:
+    name
+    image
+    description
+    rating
+    reviews
+    price
+    mrp
+    enrolledStudents
+    requirements
+    what you will Learn
+
+2. Lecture Fields
+    serial no
+    title
+    videolink
+    course
