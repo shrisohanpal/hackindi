@@ -33,6 +33,11 @@ import
     lectureReviewCreateReducer,
 } from './reducers/lectureReducers'
 
+import
+    {
+        orderCreateReducer
+    } from './reducers/orderReducers'
+
 import { cartReducer } from './reducers/cartReducers'
 
 const reducer = combineReducers({
@@ -61,6 +66,7 @@ const reducer = combineReducers({
 
     cart: cartReducer,
 
+    orderCreate: orderCreateReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

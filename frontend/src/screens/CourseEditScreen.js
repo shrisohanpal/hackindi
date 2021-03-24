@@ -14,12 +14,11 @@ const CourseEditScreen = ({ match, history }) =>
     const courseId = match.params.id
 
     const [name, setName] = useState('')
-    const [price, setPrice] = useState(0)
     const [image, setImage] = useState('')
-    const [brand, setBrand] = useState('')
-    const [category, setCategory] = useState('')
-    const [countInStock, setCountInStock] = useState(0)
+    const [video, setVideo] = useState('')
     const [description, setDescription] = useState('')
+    const [mrp, setMrp] = useState(0)
+    const [price, setPrice] = useState(0)
     const [uploading, setUploading] = useState(false)
 
     const dispatch = useDispatch()
@@ -44,12 +43,11 @@ const CourseEditScreen = ({ match, history }) =>
                 dispatch(listCourseDetails(courseId))
             } else {
                 setName(course.name)
-                setPrice(course.price)
                 setImage(course.image)
-                setBrand(course.brand)
-                setCategory(course.category)
-                setCountInStock(course.countInStock)
+                setVideo(course.video)
                 setDescription(course.description)
+                setMrp(course.mrp)
+                setPrice(course.price)
             }
         }
     }, [dispatch, history, courseId, course, successUpdate])
@@ -85,12 +83,11 @@ const CourseEditScreen = ({ match, history }) =>
             updateCourse({
                 _id: courseId,
                 name,
-                price,
                 image,
-                brand,
-                category,
+                video,
                 description,
-                countInStock,
+                mrp,
+                price,
             })
         )
     }
@@ -120,16 +117,6 @@ const CourseEditScreen = ({ match, history }) =>
                             ></Form.Control>
                         </Form.Group>
 
-                        <Form.Group controlId='price'>
-                            <Form.Label>Price</Form.Label>
-                            <Form.Control
-                                type='number'
-                                placeholder='Enter price'
-                                value={price}
-                                onChange={(e) => setPrice(e.target.value)}
-                            ></Form.Control>
-                        </Form.Group>
-
                         <Form.Group controlId='image'>
                             <Form.Label>Image</Form.Label>
                             <Form.Control
@@ -147,33 +134,13 @@ const CourseEditScreen = ({ match, history }) =>
                             {uploading && <CircularProgress />}
                         </Form.Group>
 
-                        <Form.Group controlId='brand'>
-                            <Form.Label>Brand</Form.Label>
+                        <Form.Group controlId='video'>
+                            <Form.Label>Video</Form.Label>
                             <Form.Control
                                 type='text'
-                                placeholder='Enter brand'
-                                value={brand}
-                                onChange={(e) => setBrand(e.target.value)}
-                            ></Form.Control>
-                        </Form.Group>
-
-                        <Form.Group controlId='countInStock'>
-                            <Form.Label>Count In Stock</Form.Label>
-                            <Form.Control
-                                type='number'
-                                placeholder='Enter countInStock'
-                                value={countInStock}
-                                onChange={(e) => setCountInStock(e.target.value)}
-                            ></Form.Control>
-                        </Form.Group>
-
-                        <Form.Group controlId='category'>
-                            <Form.Label>Category</Form.Label>
-                            <Form.Control
-                                type='text'
-                                placeholder='Enter category'
-                                value={category}
-                                onChange={(e) => setCategory(e.target.value)}
+                                placeholder='Enter video url'
+                                value={video}
+                                onChange={(e) => setVideo(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
 
@@ -187,9 +154,29 @@ const CourseEditScreen = ({ match, history }) =>
                             ></Form.Control>
                         </Form.Group>
 
+                        <Form.Group controlId='mrp'>
+                            <Form.Label>Mrp</Form.Label>
+                            <Form.Control
+                                type='number'
+                                placeholder='Enter Mrp'
+                                value={mrp}
+                                onChange={(e) => setMrp(e.target.value)}
+                            ></Form.Control>
+                        </Form.Group>
+
+                        <Form.Group controlId='price'>
+                            <Form.Label>Price</Form.Label>
+                            <Form.Control
+                                type='number'
+                                placeholder='Enter price'
+                                value={price}
+                                onChange={(e) => setPrice(e.target.value)}
+                            ></Form.Control>
+                        </Form.Group>
+
                         <Button type='submit' variant='primary'>
                             Update
-            </Button>
+                        </Button>
                     </Form>
                 )}
             </FormContainer>

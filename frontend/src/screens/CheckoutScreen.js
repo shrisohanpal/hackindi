@@ -13,11 +13,6 @@ const PlaceOrderScreen = ({ history }) =>
 
     const cart = useSelector((state) => state.cart)
 
-    if (!cart.shippingAddress.address) {
-        history.push('/shipping')
-    } else if (!cart.paymentMethod) {
-        history.push('/payment')
-    }
     //   Calculate prices
     const addDecimals = (num) =>
     {
@@ -65,27 +60,12 @@ const PlaceOrderScreen = ({ history }) =>
 
     return (
         <Container>
+            <h2>Checkout</h2>
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Shipping</h2>
-                            <p>
-                                <strong>Address:</strong>
-                                {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
-                                {cart.shippingAddress.postalCode},{' '}
-                                {cart.shippingAddress.country}
-                            </p>
-                        </ListGroup.Item>
-
-                        <ListGroup.Item>
-                            <h2>Payment Method</h2>
-                            <strong>Method: </strong>
-                            {cart.paymentMethod}
-                        </ListGroup.Item>
-
-                        <ListGroup.Item>
-                            <h2>Order Items</h2>
+                            <h3>Order Items</h3>
                             {cart.cartItems.length === 0 ? (
                                 <Message>Your cart is empty</Message>
                             ) : (
@@ -102,13 +82,12 @@ const PlaceOrderScreen = ({ history }) =>
                                                     />
                                                 </Col>
                                                 <Col>
-                                                    <Link to={`/product/${item.product}`}>
+                                                    <Link to={`/coursescreen/${item.course}`}>
                                                         {item.name}
                                                     </Link>
                                                 </Col>
                                                 <Col md={4}>
-                                                    {item.qty} x ${item.price} = ${item.qty * item.price}
-                                                </Col>
+                                                    ₹ {item.price}                                                </Col>
                                             </Row>
                                         </ListGroup.Item>
                                     ))}
@@ -121,23 +100,23 @@ const PlaceOrderScreen = ({ history }) =>
                     <Card>
                         <ListGroup variant='flush'>
                             <ListGroup.Item>
-                                <h2>Order Summary</h2>
+                                <h3>Summary</h3>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Items</Col>
-                                    <Col>${cart.itemsPrice}</Col>
+                                    <Col>₹ {cart.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Shipping</Col>
+                                    <Col>Discount</Col>
                                     <Col>${cart.shippingPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Tax</Col>
+                                    <Col>Extra Discount</Col>
                                     <Col>${cart.taxPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
@@ -157,7 +136,7 @@ const PlaceOrderScreen = ({ history }) =>
                                     disabled={cart.cartItems === 0}
                                     onClick={placeOrderHandler}
                                 >
-                                    Place Order
+                                    Proceed To Payment
                                 </Button>
                             </ListGroup.Item>
                         </ListGroup>

@@ -49,6 +49,14 @@ const CourseScreen = ({ history, match }) =>
     {
         history.push(`/cart/${match.params.id}`)
     }
+    const enrollHandler = () =>
+    {
+        history.push(`/cart/${match.params.id}`)
+    }
+    const addToWishListHandler = () =>
+    {
+        history.push(`/cart/${match.params.id}`)
+    }
 
     const submitHandler = (e) =>
     {
@@ -98,6 +106,9 @@ const CourseScreen = ({ history, match }) =>
                             <Card>
                                 <ListGroup variant='flush'>
                                     <ListGroup.Item>
+                                        <div>Video</div>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
                                         <Row>
                                             <Col>Price:</Col>
                                             <Col>
@@ -115,37 +126,28 @@ const CourseScreen = ({ history, match }) =>
                                         </Row>
                                     </ListGroup.Item>
 
-                                    {course.countInStock > 0 && (
-                                        <ListGroup.Item>
-                                            <Row>
-                                                <Col>Qty</Col>
-                                                <Col>
-                                                    <Form.Control
-                                                        as='select'
-                                                    // value={qty}
-                                                    // onChange={(e) => setQty(e.target.value)}
-                                                    >
-                                                        {[...Array(course.countInStock).keys()].map(
-                                                            (x) => (
-                                                                <option key={x + 1} value={x + 1}>
-                                                                    {x + 1}
-                                                                </option>
-                                                            )
-                                                        )}
-                                                    </Form.Control>
-                                                </Col>
-                                            </Row>
-                                        </ListGroup.Item>
-                                    )}
-
                                     <ListGroup.Item>
                                         <Button
                                             onClick={addToCartHandler}
                                             className='btn-block'
-                                            type='button'
-                                            disabled={course.countInStock === 0}
-                                        >
+                                            type='button'>
                                             Add To Cart
+                                        </Button>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Button
+                                            onClick={enrollHandler}
+                                            className='btn-block'
+                                            type='button'>
+                                            Enroll Now
+                                        </Button>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Button
+                                            onClick={addToWishListHandler}
+                                            className='btn-block'
+                                            type='button'>
+                                            Add To WishList
                                         </Button>
                                     </ListGroup.Item>
                                 </ListGroup>

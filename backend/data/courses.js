@@ -4,7 +4,9 @@ const courses = [
         image: '/images/banners/ba.jpg',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
+        mrp: 0,
         price: 0,
+        discount: 0,
         rating: 5,
         numReviews: 113,
     },
@@ -13,7 +15,9 @@ const courses = [
         image: '/images/banners/ba.jpg',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
-        price: 100,
+        mrp: 1000,
+        price: 399,
+        discount: 60,
         rating: 4.9,
         numReviews: 456,
     },
@@ -22,7 +26,9 @@ const courses = [
         image: '/images/banners/ba.jpg',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
-        price: 200,
+        mrp: 2000,
+        price: 799,
+        discount: 60,
         rating: 4.95,
         numReviews: 563,
     },
@@ -31,7 +37,9 @@ const courses = [
         image: '/images/banners/ba.jpg',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
-        price: 300,
+        mrp: 1500,
+        price: 599,
+        discount: 60,
         rating: 4.97,
         numReviews: 489,
     },

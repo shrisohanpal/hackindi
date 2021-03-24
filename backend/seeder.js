@@ -25,7 +25,7 @@ const importData = async () =>
 
         const sampleCourses = courses.map((course) =>
         {
-            return { ...course, user: adminUser }
+            return { ...course, creator: adminUser }
         })
 
         await Course.insertMany(sampleCourses)

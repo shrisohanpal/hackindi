@@ -18,7 +18,7 @@ const reviewSchema = mongoose.Schema(
 
 const courseSchema = mongoose.Schema(
     {
-        user: {
+        creator: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
             ref: 'User',
@@ -30,6 +30,9 @@ const courseSchema = mongoose.Schema(
         image: {
             type: String,
             required: true,
+        },
+        video: {
+            type: String,
         },
         description: {
             type: String,
@@ -46,11 +49,25 @@ const courseSchema = mongoose.Schema(
             required: true,
             default: 0,
         },
+        mrp: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
         price: {
             type: Number,
             required: true,
             default: 0,
-        }
+        },
+        discount: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
+        students: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+        }]
     },
     {
         timestamps: true,

@@ -48,15 +48,17 @@ const createCourse = asyncHandler(async (req, res) =>
 {
     const course = new Course({
         name: 'Sample name',
+        mrp: 0,
         price: 0,
-        user: req.user._id,
+        discount: 0,
+        creator: req.user._id,
         image: '/images/sample.jpg',
         numReviews: 0,
         description: 'Sample description',
     })
 
     const createdCourse = await course.save()
-    res.status(201).json(createCourse)
+    res.status(201).json(createdCourse)
 })
 
 // @desc    Update a course
@@ -66,21 +68,25 @@ const updateCourse = asyncHandler(async (req, res) =>
 {
     const {
         name,
-        price,
+        image,
+        video,
         description,
-        image
+        mrp,
+        price
     } = req.body
 
     const course = await Course.findById(req.params.id)
 
     if (course) {
         course.name = name
-        course.price = price
-        course.description = description
         course.image = image
-
+        course.video = video
+        course.description = description
+        course.mrp = mrp
+        course.price = price
+        course.discount = 100 - Number(price / mrp) * 100
         const updatedCourse = await course.save()
-        res.json(updateCourse)
+        res.json(updatedCourse)
     } else {
         res.status(404)
         throw new Error('Course not found')

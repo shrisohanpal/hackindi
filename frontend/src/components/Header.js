@@ -40,7 +40,7 @@ const Header = () =>
                         </Form>
                     </Col>
                     <Col md={3} className='my-2' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <LinkContainer to='/allcourses'>
+                        <LinkContainer to='/courses'>
                             <Nav.Link>
                                 <i className='fas fa-layer-group' style={{ fontSize: 30 }}></i>
                             </Nav.Link>
@@ -106,7 +106,7 @@ const Header = () =>
                         )
                     }
                     <ListItem>
-                        <LinkContainer to='/allcourses' className='w-100 p-0 m-0'>
+                        <LinkContainer to='/courses' className='w-100 p-0 m-0'>
                             <Nav.Link>
                                 <Button className='btn-block'>
                                     All Courses <i className='fas fa-layer-group px-3 mx-3' />

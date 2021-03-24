@@ -27,7 +27,7 @@ const HomeScreen = () =>
         <div className='text-center'>
             {/** Section 1 */}
             {userInfo && <>
-                <h4>Welcome {userInfo.name.split(' ')[0]}, Let's start learning !!!</h4>
+                <h4>Hi <strong>{userInfo.name.split(' ')[0]}</strong>, Let's start learning !!!</h4>
             </>}
             <Carousel pause='hover' style={{ margin: 0, display: 'flex', justifyContent: 'center', width: '100%', alignItems: 'center', paddingTop: 0 }}>
                 <Carousel.Item>

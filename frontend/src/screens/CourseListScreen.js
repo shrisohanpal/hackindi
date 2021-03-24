@@ -63,7 +63,7 @@ const CourseListScreen = ({ history, match }) =>
 
     const createCourseHandler = () =>
     {
-        dispatch(createdCourse())
+        dispatch(createCourse())
     }
 
     return (
@@ -93,9 +93,9 @@ const CourseListScreen = ({ history, match }) =>
                             <tr>
                                 <th>ID</th>
                                 <th>NAME</th>
+                                <th>MRP</th>
                                 <th>PRICE</th>
-                                <th>CATEGORY</th>
-                                <th>BRAND</th>
+                                <th>DISCOUNT</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -104,9 +104,9 @@ const CourseListScreen = ({ history, match }) =>
                                 <tr key={course._id}>
                                     <td>{course._id}</td>
                                     <td>{course.name}</td>
+                                    <td>Rs: {course.mrp}</td>
                                     <td>Rs: {course.price}</td>
-                                    <td>{course.category}</td>
-                                    <td>{course.brand}</td>
+                                    <td>{parseInt(course.discount)} %</td>
                                     <td>
                                         <LinkContainer to={`/admin/course/${course._id}/edit`}>
                                             <Button variant='light' className='btn-sm'>

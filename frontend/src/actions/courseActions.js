@@ -129,6 +129,7 @@ export const createCourse = () => async (dispatch, getState) =>
 
         const { data } = await axios.post(`/api/courses`, {}, config)
 
+        // console.log(data)
         dispatch({
             type: COURSE_CREATE_SUCCESS,
             payload: data,
