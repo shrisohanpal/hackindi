@@ -31,28 +31,28 @@ const HomeScreen = () =>
             </>}
             <Carousel pause='hover' style={{ margin: 0, display: 'flex', justifyContent: 'center', width: '100%', alignItems: 'center', paddingTop: 0 }}>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/a.jpg'}
+                            src={'/images/banners/aa.png'}
                             alt="First slide"
                         />
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/b.jpg'}
+                            src={'/images/banners/ab.png'}
                             alt="First slide"
                         />
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/c.jpg'}
+                            src={'/images/banners/ac.png'}
                             alt="First slide"
                         />
                     </div>
@@ -68,17 +68,17 @@ const HomeScreen = () =>
                 <Row className='text-center py-3 my-3'>
                     <Col md={4}>
                         <h3 >Practical</h3>
-                        <Image style={{ width: 300 }} src={'/images/banners/ba.jpg'} />
+                        <i className='fas fa-desktop' style={{ fontSize: 150 }}></i>
                         <p>Ethical Hacking is based on hacking So We Had Cover all Practical Tutorial.</p>
                     </Col>
                     <Col md={4}>
                         <h3 >Hindi</h3>
-                        <Image style={{ width: 300 }} src={'/images/banners/ba.jpg'} />
+                        <i className='fas fa-language' style={{ fontSize: 150 }}></i>
                         <p>Our all Courses are in Hindi, So If you don't understand English Don't Worry.</p>
                     </Col>
                     <Col md={4}>
                         <h3 >Cheap</h3>
-                        <Image style={{ width: 300 }} src={'/images/banners/ba.jpg'} />
+                        <i className='fas fa-rupee-sign' style={{ fontSize: 150 }}></i>
                         <p>You Can Learn hacking in cheap rate you can compare it...</p>
                     </Col>
                 </Row>
@@ -108,52 +108,55 @@ const HomeScreen = () =>
                 <Row className='text-center py-3 my-3'>
                     <Col md={4}>
                         <h3 >Student 1</h3>
-                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/banners/ba.jpg'} />
+                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/students/a.jpg'} />
                         <p>Ethical Hacking is based on hacking So We Had Cover all Practical Tutorial.</p>
                     </Col>
                     <Col md={4}>
                         <h3 >Student 2</h3>
-                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/banners/ba.jpg'} />
+                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/students/b.jpg'} />
                         <p>Ethical Hacking is based on hacking So We Had Cover all Practical Tutorial.</p>
                     </Col>
                     <Col md={4}>
                         <h3 >Student 3</h3>
-                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/banners/ba.jpg'} />
+                        <Image style={{ width: 160, height: 160, borderRadius: 80 }} src={'/images/students/c.jpg'} />
                         <p>Ethical Hacking is based on hacking So We Had Cover all Practical Tutorial.</p>
                     </Col>
                 </Row>
             </Container>
 
             {/**   Section 5   */}
-            <h3>free course</h3>
-            <Image style={{ minHeight: 100, marginBottom: 50 }} src={'/images/banners/cc.jpg'} fluid />
-
+            <h2>Free Course</h2>
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: 50, height: window.innerWidth < 780 ? 150 : 400 }} >
+                <Image
+                    style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
+                    src={'/images/banners/free.png'} fluid />
+            </div>
             {/** Section 6 */}
             <h2>Current Offers</h2>
             <Carousel pause='hover' style={{ margin: 0, display: 'flex', justifyContent: 'center', width: '100%', alignItems: 'center', paddingTop: 0 }}>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/a.jpg'}
+                            src={'/images/banners/ba.png'}
                             alt="First slide"
                         />
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/b.jpg'}
+                            src={'/images/banners/bb.png'}
                             alt="First slide"
                         />
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 300 }} >
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/c.jpg'}
+                            src={'/images/banners/bc.png'}
                             alt="First slide"
                         />
                     </div>

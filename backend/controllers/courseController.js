@@ -84,7 +84,7 @@ const updateCourse = asyncHandler(async (req, res) =>
         course.description = description
         course.mrp = mrp
         course.price = price
-        course.discount = 100 - Number(price / mrp) * 100
+        course.discount = 100 //- Number(price / mrp) * 100
         const updatedCourse = await course.save()
         res.json(updatedCourse)
     } else {

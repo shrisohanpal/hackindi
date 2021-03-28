@@ -1,7 +1,7 @@
 const courses = [
     {
         name: 'Hacking with Windows',
-        image: '/images/banners/ba.jpg',
+        image: '/uploads\\windows.png',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
         mrp: 0,
@@ -12,7 +12,7 @@ const courses = [
     },
     {
         name: 'Wifi Hacking & Networking',
-        image: '/images/banners/ba.jpg',
+        image: '/uploads\\wifi.png',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
         mrp: 1000,
@@ -23,7 +23,7 @@ const courses = [
     },
     {
         name: 'Android Hacking',
-        image: '/images/banners/ba.jpg',
+        image: '/uploads\\android.png',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
         mrp: 2000,
@@ -34,7 +34,7 @@ const courses = [
     },
     {
         name: 'Website Hacking & Penistration Testing',
-        image: '/images/banners/ba.jpg',
+        image: '/uploads\\website.png',
         description:
             'This is the description of the course Hacking with Windows. In this course ypu will learn a lot',
         mrp: 1500,
