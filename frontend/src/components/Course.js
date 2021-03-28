@@ -6,7 +6,7 @@ import Rating from './Rating'
 const Course = ({ course }) =>
 {
     return (
-        <Card className='my-3 p-3 rounded'>
+        <Card className='my-3 p-3 rounded' style={{ minHeight: 300 }}>
             <Link to={`/coursescreen/${course._id}`}>
                 <Card.Img src={course.image} variant='top' style={{ height: 150 }} />
                 <Card.Body className='py-0 my-0'>
@@ -19,7 +19,10 @@ const Course = ({ course }) =>
                             text={`${course.numReviews} reviews`}
                         />
                     </Card.Text>
-                    <Card.Text as='h5'><strong>₹{course.price}</strong> <strike style={{ color: 'red' }}>₹{course.mrp}</strike></Card.Text>
+                    {course.price === 0
+                        ? <Card.Text as='h3' style={{ color: 'red' }}>Free Course</Card.Text>
+                        : <Card.Text as='h5'><strong>₹{course.price}</strong> <strike style={{ color: 'red' }}>₹{course.mrp}</strike></Card.Text>
+                    }
                 </Card.Body>
             </Link>
         </Card>

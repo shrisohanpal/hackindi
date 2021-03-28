@@ -36,7 +36,9 @@ const Header = () =>
                                 <i className='fas fa-bars' />
                             </Button>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" style={{ width: window.innerWidth > 768 ? '80%' : '55%' }} />
-                            <Button>Search</Button>
+                            <LinkContainer to='/courses'>
+                                <Button>Search</Button>
+                            </LinkContainer>
                         </Form>
                     </Col>
                     <Col md={3} className='my-2' style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -55,7 +57,7 @@ const Header = () =>
                                 <i className='fas fa-cart-plus' style={{ fontSize: 30 }}></i>
                             </Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to='/notifications'>
+                        <LinkContainer to='/notification'>
                             <Nav.Link>
                                 <i className='far fa-bell' style={{ fontSize: 30 }}></i>
                             </Nav.Link>
@@ -133,7 +135,7 @@ const Header = () =>
                         </LinkContainer>
                     </ListItem>
                     <ListItem>
-                        <LinkContainer to='/notifications' className='w-100 p-0 m-0'>
+                        <LinkContainer to='/notification' className='w-100 p-0 m-0'>
                             <Nav.Link>
                                 <Button className='btn-block'>
                                     Notifications <i className='far fa-bell px-3 mx-3' />

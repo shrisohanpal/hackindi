@@ -13,6 +13,7 @@ import ForgotPasswordScreen from './screens/ForgotPasswordScreen'
 import WishListScreen from './screens/WishListScreen'
 import CartScreen from './screens/CartScreen'
 import CheckoutScreen from './screens/CheckoutScreen'
+import NotificationScreen from './screens/NotificationScreen'
 
 import UserListScreen from './screens/UserListScreen'
 import UserEditScreen from './screens/UserEditScreen'
@@ -39,6 +40,7 @@ const App = () =>
         <Route path='/wishlist/:id?' component={WishListScreen} />
         <Route path='/cart/:id?' component={CartScreen} />
         <Route path='/checkout' component={CheckoutScreen} />
+        <Route path='/notification' component={NotificationScreen} />
 
         <Route path='/admin/userlist' component={UserListScreen} />
         <Route path='/admin/user/:id/edit' component={UserEditScreen} />
