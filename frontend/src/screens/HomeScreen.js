@@ -34,7 +34,7 @@ const HomeScreen = () =>
                     <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/aa.png'}
+                            src={'/images/banners/aa.jpg'}
                             alt="First slide"
                         />
                     </div>
@@ -43,7 +43,7 @@ const HomeScreen = () =>
                     <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/ab.png'}
+                            src={'/images/banners/ab.jpg'}
                             alt="First slide"
                         />
                     </div>
@@ -52,7 +52,7 @@ const HomeScreen = () =>
                     <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
                             style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                            src={'/images/banners/ac.png'}
+                            src={'/images/banners/ac.jpg'}
                             alt="First slide"
                         />
                     </div>
@@ -129,7 +129,7 @@ const HomeScreen = () =>
             <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: 50, height: window.innerWidth < 780 ? 150 : 400 }} >
                 <Image
                     style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
-                    src={'/images/banners/free.png'} fluid />
+                    src={'/images/banners/free.jpg'} fluid />
             </div>
             {/** Section 6 */}
             <h2>Current Offers</h2>

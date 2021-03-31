@@ -16,7 +16,7 @@ const Course = ({ course }) =>
                     <Card.Text as='div'>
                         <Rating
                             value={course.rating}
-                            text={`${course.numReviews} reviews`}
+                            text={`${course.numReviews}`}
                         />
                     </Card.Text>
                     {course.price === 0

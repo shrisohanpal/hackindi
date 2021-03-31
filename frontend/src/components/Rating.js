@@ -5,6 +5,9 @@ const Rating = ({ value, text, color }) =>
     return (
         <div className='rating'>
             <span>
+                {value}{' '}
+            </span>
+            <span>
                 <i
                     style={{ color }}
                     className={
@@ -64,7 +67,7 @@ const Rating = ({ value, text, color }) =>
                     }
                 ></i>
             </span>
-            <span>{text && text}</span>
+            <span>({text && text})</span>
         </div>
     )
 }
