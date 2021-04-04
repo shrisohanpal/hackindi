@@ -22,6 +22,8 @@ import CourseEditScreen from './screens/CourseEditScreen'
 import LectureListScreen from './screens/LectureListScreen'
 import LectureEditScreen from './screens/LectureEditScreen'
 
+import OrderListScreen from './screens/OrderListScreen'
+import OrderScreen from './screens/OrderScreen'
 import LectureScreen from './screens/LectureScreen'
 
 const App = () =>
@@ -48,6 +50,8 @@ const App = () =>
         <Route path='/admin/course/:id/edit' component={CourseEditScreen} />
         <Route path='/admin/lecturelist' component={LectureListScreen} exact />
         <Route path='/admin/lecture/:id/edit' component={LectureEditScreen} />
+        <Route path='/admin/orderlist' component={OrderListScreen} exact />
+        <Route path='/order/:id' component={OrderScreen} />
 
         <Route path='/lecture' component={LectureScreen} />
       </main>
