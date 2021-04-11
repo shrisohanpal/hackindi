@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Carousel, Container, Row, Col, Image } from 'react-bootstrap'
 import Course from '../components/Course'
@@ -10,6 +10,7 @@ import OwlCarousel from 'react-owl-carousel';
 
 const HomeScreen = () =>
 {
+    const [freeCourse, setFreeCourse] = useState('605fd863916c5809d88ba84c')
     const dispatch = useDispatch()
 
     const userLogin = useSelector((state) => state.userLogin)
@@ -23,6 +24,7 @@ const HomeScreen = () =>
         dispatch(listCourses())
     }, [dispatch])
 
+    //    console.log(!loading && )
     return (
         <div className='text-center'>
             {/** Section 1 */}
@@ -126,11 +128,14 @@ const HomeScreen = () =>
 
             {/**   Section 5   */}
             <h2>Free Course</h2>
-            <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: 50, height: window.innerWidth < 780 ? 150 : 400 }} >
+            <LinkContainer to={courses && courses.find(c => c.mrp === 0) && `/coursescreen/${courses.find(c => c.mrp === 0)._id}` || '/'}
+                style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: 50, height: window.innerWidth < 780 ? 150 : 400 }}>
+
                 <Image
                     style={{ margin: 0, padding: 0, height: '100%', width: '100%', borderRadius: 0 }}
                     src={'/images/banners/free.jpg'} fluid />
-            </div>
+
+            </LinkContainer>
             {/** Section 6 */}
             <h2>Current Offers</h2>
             <Carousel pause='hover' style={{ margin: 0, display: 'flex', justifyContent: 'center', width: '100%', alignItems: 'center', paddingTop: 0 }}>

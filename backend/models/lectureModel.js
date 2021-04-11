@@ -9,7 +9,7 @@ const lectureSchema = mongoose.Schema(
         title: {
             type: String
         },
-        videoLink: {
+        video: {
             type: String,
         },
         course: {
