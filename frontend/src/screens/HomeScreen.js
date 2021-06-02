@@ -8,8 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { listCourses } from '../actions/courseActions'
 import OwlCarousel from 'react-owl-carousel';
 
-const HomeScreen = () =>
-{
+const HomeScreen = () => {
     const [freeCourse, setFreeCourse] = useState('605fd863916c5809d88ba84c')
     const dispatch = useDispatch()
 
@@ -19,8 +18,7 @@ const HomeScreen = () =>
     const courseList = useSelector((state) => state.courseList)
     const { loading, error, courses } = courseList
 
-    useEffect(() =>
-    {
+    useEffect(() => {
         dispatch(listCourses())
     }, [dispatch])
 
@@ -41,6 +39,7 @@ const HomeScreen = () =>
                         />
                     </div>
                 </Carousel.Item>
+                {/*
                 <Carousel.Item>
                     <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: window.innerWidth < 780 ? 150 : 400 }} >
                         <img
@@ -59,6 +58,7 @@ const HomeScreen = () =>
                         />
                     </div>
                 </Carousel.Item>
+                */}
             </Carousel>
 
             <Container className='py-3 my-3'>

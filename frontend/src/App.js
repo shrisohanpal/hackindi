@@ -26,8 +26,9 @@ import OrderListScreen from './screens/OrderListScreen'
 import OrderScreen from './screens/OrderScreen'
 import LectureScreen from './screens/LectureScreen'
 
-const App = () =>
-{
+import TempScreen from './screens/TempScreen'
+
+const App = () => {
   return (
     <Router>
       <Header />
@@ -54,6 +55,7 @@ const App = () =>
         <Route path='/order/:id' component={OrderScreen} />
 
         <Route path='/lecture' component={LectureScreen} />
+        <Route path='/temp' component={TempScreen} />
       </main>
       <Footer />
     </Router>
